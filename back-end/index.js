@@ -10,22 +10,22 @@ import multer from "multer"
 
 const app = express()
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }));
-app.use(multer().any())
+app.use(express.urlencoded({ extended: true }));
+app.use(multer().single("files"))
 app.use(cors());
 app.options('*', cors());
 
 app.use("/auth", authRouter)
 app.use("/content", contentRouter)
 
-app.get("/", (req, res)=>{
+app.get("/", (req, res) => {
     return res.status(200).json({
         response: true,
         msg: "Evallo Junior full-stack web developer assignment"
     })
 })
 
-app.listen(5001, async () => {
+app.listen(5002, async () => {
     try {
         console.log("Server running on 5001")
         connectDatabase;

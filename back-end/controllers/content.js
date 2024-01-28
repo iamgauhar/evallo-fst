@@ -3,12 +3,12 @@ import { uploadFile } from "../utils/fileUploadHandler.js"
 
 export const addContent = async (req, res) => {
 
-    if (!req.files) {
+    if (!req.file) {
         return res.status(401).json({ status: false, response: 'Content not added successfully.' });
     }
 
     try {
-    const file = await uploadFile(req.files);
+    const file = await uploadFile(req.file);
     const content = new contentModel(req.body);
     console.log(content)
     content.contentUrl = file;
