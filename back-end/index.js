@@ -1,4 +1,4 @@
-import express from "express"
+import express, { response } from "express"
 import cors from "cors"
 import bodyParser from "body-parser"
 import "dotenv/config"
@@ -18,6 +18,12 @@ app.options('*', cors());
 app.use("/auth", authRouter)
 app.use("/content", contentRouter)
 
+app.get("/", (req, res)=>{
+    return res.status(200).json({
+        response: true,
+        msg: "Evallo Junior full-stack web developer assignment"
+    })
+})
 
 app.listen(5001, async () => {
     try {
