@@ -7,7 +7,6 @@ const authorization = (req, res, next) => {
     jwt.verify(token, process.env.JWTKEY, (err, user) => {
         if (err) return res.status(403).json({ status: false, response: 'Access denied.' });
         req.body.userId = user.userId
-        req.body.phoneNumber = user.phone_number
         next()
     });
 }

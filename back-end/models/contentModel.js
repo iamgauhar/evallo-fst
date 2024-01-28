@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const contentModel = mongoose.model("order", mongoose.Schema({
+const contentModel = mongoose.model("content", mongoose.Schema({
     userId: {
         type: String,
         required: true
@@ -12,7 +12,7 @@ const contentModel = mongoose.model("order", mongoose.Schema({
     description: {
         type: String
     },
-    contentUrl:{
+    contentUrl: {
         type: String
     }
 }))
