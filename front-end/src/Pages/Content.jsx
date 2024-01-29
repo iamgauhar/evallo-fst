@@ -83,7 +83,7 @@ const Content = () => {
                 </div>
                 <div className="w-80 rounded-2xl bg-slate-100">
 
-                    <Link to="/order-list"><button className=" w-full inline-block cursor-pointer rounded-md bg-gray-500 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95">All Content</button></Link>
+                    <Link to="/content-list"><button className=" w-full inline-block cursor-pointer rounded-md bg-gray-500 px-4 py-3.5 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-700 focus-visible:ring-offset-2 active:scale-95">All Content</button></Link>
 
                 </div>
 

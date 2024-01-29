@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Table = ({ allOrders, subTotal }) => {
-    console.log(allOrders, subTotal)
+const Table = ({ allContent }) => {
+    
     return (
         <div className=''>
             <div class="flex flex-col">
@@ -12,16 +12,23 @@ const Table = ({ allOrders, subTotal }) => {
                                 <thead>
                                     <tr>
                                         {/* <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th> */}
-                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Phone Number</th>
-                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Total</th>
+                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Content</th>
+                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Title</th>
+                                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Description</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
-                                        allOrders?.map((el) => {
+                                        allContent?.map((el) => {
                                             return <tr key={el._id} class="odd:bg-white even:bg-gray-100">
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">{el.phoneNumber}</td>
-                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">{el.total}</td>
+
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                                   <div className='w-52 h-28'>
+                                                   <img className='w-full h-full object-cover' src={el.contentUrl} alt="" />
+                                                   </div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">{el.title}</td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">{el.description}</td>
 
                                             </tr>
                                         })

@@ -1,8 +1,8 @@
 import bcrypt from "bcryptjs"
 import { userRegisterModel } from "../models/userModel.js"
 
+// User Signup controller
 export const userSignup = async (req, res) => {
-
 
     const { name, email, password } = req.body
 
@@ -26,6 +26,8 @@ export const userSignup = async (req, res) => {
 
 
 }
+
+
 
 export const userLogin = async (req, res) => {
     const { email, password } = req.body;

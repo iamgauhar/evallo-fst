@@ -3,8 +3,8 @@ import { Link, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import Signup from './Pages/Signup'
 import Login from './Pages/Login'
-import OrderList from './Pages/OrderList'
 import Content from './Pages/Content'
+import ContentList from './Pages/ContentList'
 Link
 // import './App.css'
 
@@ -19,7 +19,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/add-content' element={<Content />} />
-        <Route path='/order-list' element={<OrderList />} />
+        <Route path='/content-list' element={<ContentList />} />
       </Routes>
 
     </>

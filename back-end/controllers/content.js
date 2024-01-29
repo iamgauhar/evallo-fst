@@ -1,6 +1,7 @@
 import contentModel from "../models/contentModel.js"
 import { uploadFile } from "../utils/fileUploadHandler.js"
 
+// Uploading content Controllers
 export const addContent = async (req, res) => {
 
     if (!req.file) {
@@ -14,8 +15,8 @@ export const addContent = async (req, res) => {
     content.contentUrl = file;
     await content.save();
    return res.status(201).json({
-        message: 'Content added successfully!',
-        success: true,
+        response: 'Content added successfully!',
+        status: true,
         content,
     });
 
@@ -24,8 +25,9 @@ export const addContent = async (req, res) => {
     }
 }
 
-export const getContent = async (req, res) => {
 
+// fetching all content Controllers
+export const getContent = async (req, res) => {
 
     try{
         const contents = await contentModel.find({ userId: req.body.userId })
